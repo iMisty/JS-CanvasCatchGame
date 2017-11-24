@@ -1,9 +1,9 @@
 # Canvas-Catch-Game
-HTML5 Canvas Game
+## HTML5 Canvas Game
 
-An easy,simple HTML5 Game
+### An easy,simple HTML5 Game
 
-Demo:https://jingyi21.github.io/Canvas-Catch-Game/
+### Demo:https://jingyi21.github.io/JS-CanvasCatchGame
 
-Play Rule:
+## Play Rule:
 Use keyboard ↑↓←→(up,down,left,right),control hero to catch demon.
