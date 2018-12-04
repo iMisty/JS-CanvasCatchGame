@@ -8,7 +8,7 @@ canvas.height = 480;
 document.body.appendChild(canvas);
 
 //Background Image
-var bgReady = false;
+const bgReady = false;
 var bgImage = new Image();
 
 bgImage.onload = function(){
