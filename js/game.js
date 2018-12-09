@@ -9,7 +9,7 @@ document.body.appendChild(canvas);
 
 //Background Image
 const bgReady = false;
-var bgImage = new Image();
+let bgImage = new Image();
 
 bgImage.onload = function(){
 	bgReady = true;
