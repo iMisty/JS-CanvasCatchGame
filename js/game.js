@@ -18,7 +18,7 @@ bgImage.src = "images/background.png";
 
 //Hero Image
 let heroReady = false;
-var heroImage = new Image();
+let heroImage = new Image();
 
 heroImage.onload = function(){
 	heroReady = true;
