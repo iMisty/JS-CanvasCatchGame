@@ -26,7 +26,7 @@ heroImage.onload = function(){
 heroImage.src = "images/hero.png";
 
 //Monster Image
-var monsterReady = false;
+let monsterReady = false;
 var monsterImage = new Image();
 
 monsterImage.onload = function(){
