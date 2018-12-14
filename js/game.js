@@ -27,7 +27,7 @@ heroImage.src = "images/hero.png";
 
 //Monster Image
 let monsterReady = false;
-var monsterImage = new Image();
+let monsterImage = new Image();
 
 monsterImage.onload = function(){
 	monsterReady = true;
