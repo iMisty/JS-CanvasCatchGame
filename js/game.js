@@ -35,7 +35,7 @@ monsterImage.onload = function(){
 monsterImage.src = "images/monster.png";
 
 //Game Object
-var hero = {
+let hero = {
 	speed:256
 };
 var monster = {};
