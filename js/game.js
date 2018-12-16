@@ -38,7 +38,7 @@ monsterImage.src = "images/monster.png";
 let hero = {
 	speed:256
 };
-var monster = {};
+let monster = {};
 var monsterCaught = 0;
 
 // Handle keyboard controls
