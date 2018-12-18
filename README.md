@@ -3,7 +3,7 @@
 
 ### An easy,simple HTML5 Game
 
-### Demo:https://jingyi21.github.io/JS-CanvasCatchGame
+### Demo:https://iMisty.github.io/JS-CanvasCatchGame
 
 ## Play Rule:
 Use keyboard ↑↓←→(up,down,left,right),control hero to catch demon.
