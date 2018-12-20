@@ -39,7 +39,7 @@ let hero = {
 	speed:256
 };
 let monster = {};
-var monsterCaught = 0;
+let monsterCaught = 0;
 
 // Handle keyboard controls
 var keysDown = {};
