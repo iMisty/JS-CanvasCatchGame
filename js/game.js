@@ -42,7 +42,7 @@ let monster = {};
 let monsterCaught = 0;
 
 // Handle keyboard controls
-var keysDown = {};
+let keysDown = {};
 
 addEventListener("keydown", function (e) {
     keysDown[e.keyCode] = true;
