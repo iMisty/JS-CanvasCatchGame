@@ -64,7 +64,7 @@ let reset = function(){
 };
 
 //Update Object
-var update = function(modifier){
+let update = function(modifier){
 	if(38 in keysDown){
 		hero.y -= hero.speed * modifier;
 	}
