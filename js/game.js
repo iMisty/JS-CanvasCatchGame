@@ -91,7 +91,7 @@ let update = function(modifier){
 };
 
 //Draw
-var render = function(){
+let render = function(){
 	if(bgReady){
 		ctx.drawImage(bgImage,0,0);
 	}
