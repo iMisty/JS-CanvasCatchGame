@@ -128,7 +128,7 @@ let main = function(){
 };
 
 //RequestAnimationFrame
-var w = window;
+const w = window;
 requestAnimationFrame = 
 	w.requestAnimationFrame || 
 	w.webkitRequestAnimationFrame ||
