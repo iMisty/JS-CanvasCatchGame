@@ -136,6 +136,6 @@ requestAnimationFrame =
 	w.mozRequestAnimationFrame;
 
 //Play
-var then = Date.now();
+let then = Date.now();
 reset();
 main();
