@@ -115,7 +115,7 @@ let render = function(){
 
 //The main game loop
 let main = function(){
-	var now = Date.now();
+	let now = Date.now();
 	var delta = now - then;
 
 	update(delta / 1000);
