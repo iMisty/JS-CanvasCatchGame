@@ -8,7 +8,7 @@ canvas.height = 480;
 document.body.appendChild(canvas);
 
 const bgReady = false;
-let bgImage = new Image();
+var bgImage = new Image();
 
 bgImage.onload = function(){
 	bgReady = true;
@@ -16,8 +16,8 @@ bgImage.onload = function(){
 bgImage.src = "images/background.png";
 
 //Hero
-let heroReady = false;
-let heroImage = new Image();
+var heroReady = false;
+var heroImage = new Image();
 
 heroImage.onload = function(){
 	heroReady = true;
@@ -25,8 +25,8 @@ heroImage.onload = function(){
 heroImage.src = "images/hero.png";
 
 //Monster Image
-let monsterReady = false;
-let monsterImage = new Image();
+var monsterReady = false;
+var monsterImage = new Image();
 
 monsterImage.onload = function(){
 	monsterReady = true;
@@ -34,26 +34,26 @@ monsterImage.onload = function(){
 monsterImage.src = "images/monster.png";
 
 //Game Object
-let hero = {
+var hero = {
 	speed:256
 };
-let monster = {};
-let monsterCaught = 0;
+var monster = {};
+var monsterCaught = 0;
 
 // Handle keyboard controls
-let keysDown = {};
+var keysDown = {};
 
 addEventListener("keydown", function (e) {
     keysDown[e.keyCode] = true;
 }, false);
 
 addEventListener("keyup", function (e) {
-    delete keysDown[e.keyCode];
+    keysDown[e.keyCode];
 }, false);
 
 
 //Reset the game when the player catches a monster
-let reset = function(){
+var reset = function(){
 	hero.x = canvas.width / 2;
 	hero.y = canvas.height / 2;
 
@@ -63,7 +63,7 @@ let reset = function(){
 };
 
 //Update Object
-let update = function(modifier){
+var update = function(modifier){
 	if(38 in keysDown){
 		hero.y -= hero.speed * modifier;
 	}
@@ -90,7 +90,7 @@ let update = function(modifier){
 };
 
 //Draw
-let render = function(){
+var render = function(){
 	if(bgReady){
 		ctx.drawImage(bgImage,0,0);
 	}
@@ -113,9 +113,9 @@ let render = function(){
 };
 
 //The main game loop
-let main = function(){
-	let now = Date.now();
-	let delta = now - then;
+var main = function(){
+	var now = Date.now();
+	var delta = now - then;
 
 	update(delta / 1000);
 	render();
@@ -135,6 +135,6 @@ requestAnimationFrame =
 	w.mozRequestAnimationFrame;
 
 //Play
-let then = Date.now();
+var then = Date.now();
 reset();
 main();
