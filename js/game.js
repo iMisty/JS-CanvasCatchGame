@@ -48,7 +48,7 @@ addEventListener("keydown", function (e) {
 }, false);
 
 addEventListener("keyup", function (e) {
-    keysDown[e.keyCode];
+    keysDown[e.keyCode] = false;
 }, false);
 
 
