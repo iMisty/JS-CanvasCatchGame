@@ -7,7 +7,8 @@ canvas.height = 480;
 
 document.body.appendChild(canvas);
 
-let bgReady = false;
+//Background Image
+var bgReady = false;
 var bgImage = new Image();
 
 bgImage.onload = function(){
@@ -15,7 +16,7 @@ bgImage.onload = function(){
 };
 bgImage.src = "images/background.png";
 
-//Hero
+//Hero Image
 var heroReady = false;
 var heroImage = new Image();
 
@@ -48,7 +49,7 @@ addEventListener("keydown", function (e) {
 }, false);
 
 addEventListener("keyup", function (e) {
-    keysDown[e.keyCode] = false;
+    delete keysDown[e.keyCode];
 }, false);
 
 
