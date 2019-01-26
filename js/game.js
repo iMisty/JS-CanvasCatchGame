@@ -1,6 +1,6 @@
 //Canvas
-var canvas = document.createElement("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
 
 canvas.width = 512;
 canvas.height = 480;
@@ -8,53 +8,53 @@ canvas.height = 480;
 document.body.appendChild(canvas);
 
 //Background Image
-var bgReady = false;
-var bgImage = new Image();
+let bgReady = false;
+const bgImage = new Image();
 
-bgImage.onload = function(){
+bgImage.onload = () => {
 	bgReady = true;
 };
 bgImage.src = "images/background.png";
 
 //Hero Image
-var heroReady = false;
-var heroImage = new Image();
+let heroReady = false;
+const heroImage = new Image();
 
-heroImage.onload = function(){
+heroImage.onload = () => {
 	heroReady = true;
 };
 heroImage.src = "images/hero.png";
 
 //Monster Image
-var monsterReady = false;
-var monsterImage = new Image();
+let monsterReady = false;
+const monsterImage = new Image();
 
-monsterImage.onload = function(){
+monsterImage.onload = () => {
 	monsterReady = true;
 };
 monsterImage.src = "images/monster.png";
 
 //Game Object
-var hero = {
+const hero = {
 	speed:256
 };
-var monster = {};
-var monsterCaught = 0;
+const monster = {};
+let monsterCaught = 0;
 
 // Handle keyboard controls
-var keysDown = {};
+const keysDown = {};
 
-addEventListener("keydown", function (e) {
+addEventListener("keydown", (e) => {
     keysDown[e.keyCode] = true;
 }, false);
 
-addEventListener("keyup", function (e) {
+addEventListener("keyup", (e) =>  {
     delete keysDown[e.keyCode];
 }, false);
 
 
 //Reset the game when the player catches a monster
-var reset = function(){
+const reset = () => {
 	hero.x = canvas.width / 2;
 	hero.y = canvas.height / 2;
 
@@ -64,7 +64,7 @@ var reset = function(){
 };
 
 //Update Object
-var update = function(modifier){
+const update = (modifier) => {
 	if(38 in keysDown){
 		hero.y -= hero.speed * modifier;
 	}
@@ -91,7 +91,7 @@ var update = function(modifier){
 };
 
 //Draw
-var render = function(){
+const render = () => {
 	if(bgReady){
 		ctx.drawImage(bgImage,0,0);
 	}
@@ -109,14 +109,14 @@ var render = function(){
 	ctx.font = "24px Helvetica";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
-	ctx.fillText("Goblins caught:"+ monsterCaught,32,32);	
+	ctx.fillText("Goblins Caught:"+ monsterCaught,32,32);	
 
 };
 
 //The main game loop
-var main = function(){
-	var now = Date.now();
-	var delta = now - then;
+const main = () => {
+	let now = Date.now();
+	let delta = now - then;
 
 	update(delta / 1000);
 	render();
@@ -128,7 +128,7 @@ var main = function(){
 };
 
 //RequestAnimationFrame
-var w = window;
+const w = window;
 requestAnimationFrame = 
 	w.requestAnimationFrame || 
 	w.webkitRequestAnimationFrame ||
@@ -136,6 +136,6 @@ requestAnimationFrame =
 	w.mozRequestAnimationFrame;
 
 //Play
-var then = Date.now();
+let then = Date.now();
 reset();
 main();
